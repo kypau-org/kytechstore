@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kytechstore - Your Technology Partner</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-store me-2"></i>kytechstore</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#categories">Kategori</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#trending">Trending</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                
+                <form class="d-flex search-form me-3">
+                    <input class="form-control me-2" type="search" placeholder="Cari produk..." aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                
+                <div class="d-flex">
+                    <a href="#" class="btn btn-outline-primary me-2"><i class="fas fa-shopping-cart"></i> <span class="badge bg-danger">3</span></a>
+                    <a href="#" class="btn btn-primary">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Teknologi Terdepan untuk Kehidupan Digital Anda</h1>
+                    <p class="lead mb-4">Temukan gadget, laptop, smartphone, dan perangkat teknologi terbaru dengan harga terbaik. Garansi resmi dan pengiriman cepat ke seluruh Indonesia.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#trending" class="btn btn-primary btn-lg">Belanja Sekarang</a>
+                        <a href="#categories" class="btn btn-outline-light btn-lg">Lihat Kategori</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Kategori Produk</h2>
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="card category-card h-100 text-center p-4">
+                        <div class="category-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h5>Laptop & Desktop</h5>
+                        <p class="text-muted">Gaming, Bisnis, Editing</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card category-card h-100 text-center p-4">
+                        <div class="category-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h5>Smartphone</h5>
+                        <p class="text-muted">Android, iPhone, Accessories</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card category-card h-100 text-center p-4">
+                        <div class="category-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h5>Gaming Console</h5>
+                        <p class="text-muted">PS5, Xbox, Nintendo</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card category-card h-100 text-center p-4">
+                        <div class="category-icon">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <h5>Audio & Accessories</h5>
+                        <p class="text-muted">Headphone, Speaker, Cable</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Products -->
+    <section id="trending" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Produk Trending</h2>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="https://mcgrocer.com/cdn/shop/files/asus-rog-strix-g16-intel-core-i7-16gb-ram-1tb-ssd-nvidia-geforce-rtx-4060-16-inch-gaming-laptop-g614jv-n3075w-42583860674798.jpg?v=1736309584" class="product-image" alt="Laptop Gaming">
+                            <span class="badge-sale">20% OFF</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Laptop Gaming ROG</h5>
+                            <p class="text-muted">Intel i7, RTX 4060, 16GB RAM</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="price">Rp 15.999.000</span>
+                                    <span class="original-price ms-2">Rp 19.999.000</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm">Beli</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="https://www.fonezone.ae/cdn/shop/files/Untitled_27_26_cea6ed2c-2874-4afe-b2ae-f0eb6248075c.jpg?v=1731151680&width=1445" class="product-image" alt="iPhone">
+                            <span class="badge-sale">15% OFF</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">iPhone 15 Pro</h5>
+                            <p class="text-muted">256GB, Titanium Blue</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="price">Rp 18.999.000</span>
+                                    <span class="original-price ms-2">Rp 22.999.000</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm">Beli</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100">
+                        <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="product-image" alt="PlayStation 5">
+                        <div class="card-body">
+                            <h5 class="card-title">PlayStation 5</h5>
+                            <p class="text-muted">Console + 2 Controllers</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="price">Rp 8.499.000</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm">Beli</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card h-100">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXz3n-etRbA_ytu1OPb0KAr0eiQSLuEbxXMg&s" class="product-image" alt="Headphone">
+                        <div class="card-body">
+                            <h5 class="card-title">Sony WH-1000XM5</h5>
+                            <p class="text-muted">Noise Cancelling Headphone</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="price">Rp 4.999.000</span>
+                                </div>
+                                <button class="btn btn-primary btn-sm">Beli</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore More Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Jelajahi Lebih Banyak</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card product-card h-100">
+                        <img src="https://istore.co.na/cdn/shop/products/iPad_ProM2_WiFi_Cellular_SpaceGrey_Position3_794c591e-b3f4-48f0-9554-13a7df3fe0ec_600x.png?v=1667564197" class="product-image" alt="Tablet">
+                        <div class="card-body">
+                            <h5 class="card-title">iPad Pro 12.9"</h5>
+                            <p class="text-muted">M2 Chip, 512GB</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">Rp 16.999.000</span>
+                                <button class="btn btn-primary btn-sm">Beli</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card product-card h-100">
+                        <img src="https://media.dinomarket.com/docs/imgTD/2023-12/Apple_Watch_Ultra_2_GPS_Cellular_Blue_Ocean_Band_111223181257_ll.jpg.jpg" class="product-image" alt="Smartwatch">
+                        <div class="card-body">
+                            <h5 class="card-title">Apple Watch Ultra</h5>
+                            <p class="text-muted">GPS + Cellular, 49mm</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">Rp 12.999.000</span>
+                                <button class="btn btn-primary btn-sm">Beli</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card product-card h-100">
+                        <img src="https://kr.thermaltake.com/media/catalog/product/cache/cc8b24283b13da6bc2ff91682c03b54b/l/2/l20rgbb_02.jpg" class="product-image" alt="Keyboard">
+                        <div class="card-body">
+                            <h5 class="card-title">Mechanical Keyboard</h5>
+                            <p class="text-muted">RGB, Cherry MX Blue</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">Rp 1.299.000</span>
+                                <button class="btn btn-primary btn-sm">Beli</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-outline-primary btn-lg">Lihat Semua Produk</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 about-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="https://www.foliopos.com/images/article/large/ingin-punya-toko-elektronik-sendiri-ini-cara-memulainya.jpg" class="img-fluid rounded" alt="About Us">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title text-start">Tentang kytechstore</h2>
+                    <p class="lead">kytechstore adalah toko teknologi terpercaya yang telah melayani jutaan pelanggan di Indonesia sejak 2015.</p>
+                    <p>Kami berkomitmen untuk menyediakan produk teknologi terbaru dengan kualitas terbaik dan harga yang kompetitif. Dengan tim customer service yang handal dan layanan purna jual yang memuaskan, kami memastikan pengalaman berbelanja yang menyenangkan.</p>
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <h4 class="text-primary">500K+</h4>
+                            <p>Pelanggan Puas</p>
+                        </div>
+                        <div class="col-6">
+                            <h4 class="text-primary">1000+</h4>
+                            <p>Produk Tersedia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Hubungi Kami</h2>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="contact-form p-4">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label">Nama Lengkap</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subjek</label>
+                                <input type="text" class="form-control" id="subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Pesan</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-info">
+                        <h4 class="mb-4">Informasi Kontak</h4>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-map-marker-alt text-primary me-3"></i>
+                            <div>
+                                <h6>Alamat</h6>
+                                <p class="mb-0">Jl. Sudirman No. 123, Jakarta Pusat</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-phone text-primary me-3"></i>
+                            <div>
+                                <h6>Telepon</h6>
+                                <p class="mb-0">+62 21 1234 5678</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-envelope text-primary me-3"></i>
+                            <div>
+                                <h6>Email</h6>
+                                <p class="mb-0">info@kytechstore.com</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-clock text-primary me-3"></i>
+                            <div>
+                                <h6>Jam Operasional</h6>
+                                <p class="mb-0">Senin - Sabtu: 09:00 - 21:00</p>
+                                <p class="mb-0">Minggu: 10:00 - 18:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3"><i class="fas fa-store me-2"></i>kytechstore</h5>
+                    <p>Toko teknologi terpercaya dengan produk berkualitas dan layanan terbaik untuk kebutuhan digital Anda.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Kategori</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">Laptop</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Smartphone</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Gaming</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Audio</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Layanan</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">Garansi</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Pengiriman</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Support</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Return</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h6 class="mb-3">Newsletter</h6>
+                    <p>Dapatkan update produk terbaru dan penawaran khusus</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control newsletter-input" placeholder="Email Anda">
+                        <button class="btn btn-primary newsletter-btn" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 kytechstore. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-light text-decoration-none me-3">Terms of Service</a>
+                    <a href="#" class="text-light text-decoration-none">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
