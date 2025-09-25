@@ -3,16 +3,99 @@
   --secondary-color: #f8f9fa;
   --accent-color: #10b981;
   --dark-color: #1f2937;
+  --success-color: #10b981;
+  --error-color: #ef4444;
+  --warning-color: #f59e0b;
+  --info-color: #3b82f6;
 }
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Loading animation */
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Notification system */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px 25px;
+  border-radius: 8px;
+  color: white;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.notification.success {
+  background-color: var(--success-color);
+}
+
+.notification.error {
+  background-color: var(--error-color);
+}
+
+.notification.warning {
+  background-color: var(--warning-color);
+}
+
+.notification.info {
+  background-color: var(--info-color);
+}
+
+.navbar {
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
 }
 
 .navbar-brand {
   font-weight: bold;
   font-size: 1.5rem;
   color: var(--primary-color) !important;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+  }
+
+  .search-form {
+    margin: 1rem 0;
+  }
 }
 
 .hero-section {
@@ -27,15 +110,38 @@ body {
 }
 
 .category-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   border: none;
   border-radius: 15px;
+  position: relative;
+  overflow: hidden;
 }
 
 .category-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.category-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease-in-out;
+}
+
+.category-card:hover::after {
+  transform: translateX(100%);
+}
+
+.category-card.clicked {
+  transform: scale(0.95);
+  transition: transform 0.2s ease;
 }
 
 .category-icon {
@@ -45,15 +151,52 @@ body {
 }
 
 .product-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: none;
   border-radius: 15px;
   overflow: hidden;
+  position: relative;
 }
 
 .product-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.product-card .btn-primary.btn-sm {
+  opacity: 0.9;
+  transform: translateY(5px);
+  transition: all 0.3s ease;
+}
+
+.product-card:hover .btn-primary.btn-sm {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product-card .position-relative {
+  overflow: hidden;
+}
+
+.product-card .position-relative::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.product-card:hover .position-relative::before {
+  left: 100%;
 }
 
 .product-image {
@@ -114,6 +257,44 @@ body {
   background: white;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.contact-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.form-control {
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid #dee2e6;
+  background-color: #fff;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.1);
+}
+
+.form-control.is-invalid {
+  border-color: var(--error-color);
+  background-image: none;
+}
+
+@media (max-width: 767.98px) {
+  .contact-form {
+    padding: 1.5rem !important;
+  }
+
+  .contact-info {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .footer {
