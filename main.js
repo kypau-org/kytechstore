@@ -1,4 +1,3 @@
-// Initialize cart
 let cartItems = [];
 const cartBadge = document.querySelector(".badge");
 
@@ -20,10 +19,8 @@ function loadCart() {
   }
 }
 
-// Load cart on page init
 loadCart();
 
-// Smooth scrolling with offset
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -41,7 +38,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Notification system
 function showNotification(message, type = "info") {
   const notification = document.createElement("div");
   notification.className = `notification ${type}`;
@@ -58,7 +54,6 @@ function showNotification(message, type = "info") {
   }, 100);
 }
 
-// Form validation
 function validateForm(formData) {
   const email = formData.get("email");
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -78,7 +73,6 @@ function validateForm(formData) {
   }
 }
 
-// Contact form submission with validation
 document
   .querySelector("#contact form")
   .addEventListener("submit", function (e) {
@@ -97,7 +91,6 @@ document
     }
   });
 
-// Newsletter subscription
 document
   .querySelector(".newsletter-btn")
   .addEventListener("click", function () {
@@ -108,7 +101,6 @@ document
     }
   });
 
-// Add to cart functionality
 document.querySelectorAll(".btn-primary.btn-sm").forEach((btn) => {
   if (btn.textContent.trim() === "Beli") {
     btn.addEventListener("click", function () {
@@ -116,7 +108,6 @@ document.querySelectorAll(".btn-primary.btn-sm").forEach((btn) => {
         this.closest(".card").querySelector(".card-title").textContent;
       alert(`${productName} telah ditambahkan ke keranjang!`);
 
-      // Update cart badge
       const badge = document.querySelector(".badge");
       let count = parseInt(badge.textContent);
       badge.textContent = count + 1;
@@ -124,7 +115,6 @@ document.querySelectorAll(".btn-primary.btn-sm").forEach((btn) => {
   }
 });
 
-// Search functionality with debounce
 function debounce(func, wait) {
   let timeout;
   return function executedFunction(...args) {
@@ -182,7 +172,6 @@ document
     performSearch(this.value);
   });
 
-// Category card click functionality
 document.querySelectorAll(".category-card").forEach((card) => {
   card.addEventListener("click", function () {
     const categoryName = this.querySelector("h5").textContent;
@@ -190,7 +179,6 @@ document.querySelectorAll(".category-card").forEach((card) => {
   });
 });
 
-// Lazy loading for images
 document.addEventListener("DOMContentLoaded", function () {
   const images = document.querySelectorAll(".product-image");
   const imageOptions = {
@@ -222,7 +210,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Navbar scroll behavior
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector(".navbar");
   if (window.scrollY > 50) {
@@ -232,7 +219,6 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// Page load animation
 window.addEventListener("load", function () {
   document.body.style.opacity = "0";
   document.body.style.transition = "opacity 0.5s ease-in-out";
@@ -240,3 +226,4 @@ window.addEventListener("load", function () {
     document.body.style.opacity = "1";
   }, 100);
 });
+
