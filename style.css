@@ -15,7 +15,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Loading animation */
 .loading {
   position: fixed;
   top: 0;
@@ -29,7 +28,6 @@ body {
   z-index: 9999;
 }
 
-/* Notification system */
 .notification {
   position: fixed;
   bottom: 20px;
@@ -342,3 +340,4 @@ body {
 .search-form {
   max-width: 500px;
 }
+
